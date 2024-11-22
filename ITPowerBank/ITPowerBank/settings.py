@@ -28,6 +28,10 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+# Redirige aquí si un usuario no está autenticado
+LOGIN_URL = '/login/'  
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'login',
+    'clientes',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +60,8 @@ ROOT_URLCONF = 'ITPowerBank.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],  
+        # Incluye la carpeta global templates        
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

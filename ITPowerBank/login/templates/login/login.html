@@ -16,10 +16,15 @@
     {% if form.non_field_errors %}
         <div>
             {% for error in form.non_field_errors %}  <!-- Itera sobre los errores -->
-                <p class ="error">{{ error }}</p>  <!-- Muestra cada error -->
+                <!-- <p class ="error">{{ error }}</p> -->
+                  <!-- Muestra cada error -->
             {% endfor %}
         </div>
     {% endif %}
-    
+    <p>
+        ¿Todavía no tienes una cuenta? 
+        <a href="{% url 'registro' %}">¡Regístrate!</a>
+    </p>
+
 </body>
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="/static/styles.css"> -->
+        <title>ITPowerBank</title>
+    </head>
+    <body>
+        <header>
+            <hr>
+            <p><i>Logo de la empresa</i></p>
+            {% if user.is_authenticated %}
+                <p>Bienvenido, {{ user.cliente.nombre }} {{ user.cliente.apellido }}.</p><!-- Muestra el nombre y apellido del cliente autenticado -->
+                <form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit">Cerrar sesión</button>
+                </form>            
+                {% else %}
+                <a href="{% url 'login' %}">Iniciar sesión</a><!-- Enlace para iniciar sesión -->
+            {% endif %}
+            <hr>
+        </header>
+
+        <main>
+            <hr>
+            {% block content %}{% endblock %} <!-- Bloque de contenido que puede ser sobrescrito por otras plantillas -->
+            <hr>
+        </main>
+        
+        <footer>
+            <hr>
+            <p>&copy; 2024 ITPowerBank</p>
+            <hr>
+        </footer>
+    </body>
+</html>

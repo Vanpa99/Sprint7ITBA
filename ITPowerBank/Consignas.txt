@@ -10,16 +10,16 @@ El objetivo de unir el front-end con el back-end lo llevaremos adelante en el pr
     
     --Primera problemática: Crear Modelo. (Segunda Clase)
 Se requiere crear el proyecto DJANGO homebanking, el mismo va a estar compuesto al por diferentes aplicaciones, como, por ejemplo: 
-Clientes,​​​❌
+Login,✅
+Clientes,​​​✅
 Cuentas, ​❌
 Tarjetas, ​❌
 Movimientos, ​❌
 Prestamos, ​❌
-Login,✅
 entre otras. Pueden generar las aplicaciones necesarias para asegurar la adecuada segmentación del proyecto. (!!!) 
 
 A partir de la base de datos trabajada en el sprint 6, se requiere crear un modelo para cada entidad que se requiera almacenar en la base de datos. El modelo debe definir los campos que almacenarán los datos de la entidad alineados con los campos de la base de datos. Ejemplo: 
-Cliente, ​❌
+Cliente, ​​❗
 Cuenta, ​❌
 Empleado, ​❌
 Movimiento, ​❌
@@ -44,12 +44,12 @@ etc. (!!!)​❌
 En el modelo MVC, las vistas son responsables de manejar las peticiones de los usuarios y responder con la información adecuada. En el siguiente sprint, veremos Django REST Framework para construir una API. Dentro de este contexto, las vistas serán responsables de manejar las peticiones HTTP y responder con los datos del modelo en formato JSON.
 
     --Tercera problemática: Autenticación -- (Cuarta Clase)
-Incorporar el registro y autenticación de clientes para todo el sitio. Se debe utilizar el sistema de autenticación provisto por DJANGO.(!!!) 
+Incorporar el registro y autenticación de clientes para todo el sitio. Se debe utilizar el sistema de autenticación provisto por DJANGO.
 
-.Se necesita generar una relación entre el usuario que se autentica y la información de cliente almacenada. Debería haber una relación 1 a 1 entre cliente y usuario.(!!!)
-.La construcción deberá permitir que se pueda agregar al menú del home banking la opción de salir o cerrar sesión. (!!!)
-.Una vez autenticado el usuario, el home banking debe mostrar su nombre en algún lugar del sitio. (!!!)
-.Todas las páginas del sitio van a tener que chequear que el usuario esta autenticado.(!!!)
+.Se necesita generar una relación entre el usuario que se autentica y la información de cliente almacenada. Debería haber una relación 1 a 1 entre cliente y usuario.✅
+.La construcción deberá permitir que se pueda agregar al menú del home banking la opción de salir o cerrar sesión. ✅
+.Una vez autenticado el usuario, el home banking debe mostrar su nombre en algún lugar del sitio. ✅
+.Todas las páginas del sitio van a tener que chequear que el usuario esta autenticado.​❗
 
     --Cuarta problemática: Formulario
 El equipo de marketing lanzo una compañía para todos sus clientes ofreciendo préstamos personales. Por ese motivo, tenemos que crear una app préstamos. La aplicación debe tener un formulario de solicitud de préstamos preaprobados. El formulario debe ser enviado por POST y tener protección contra Cross site request forgery.(!!!)
