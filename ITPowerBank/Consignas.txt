@@ -15,7 +15,7 @@ Cuentas, ​❌
 Tarjetas, ​❌
 Movimientos, ​❌
 Prestamos, ​❌
-Login,  ​❌
+Login,✅
 entre otras. Pueden generar las aplicaciones necesarias para asegurar la adecuada segmentación del proyecto. (!!!) 
 
 A partir de la base de datos trabajada en el sprint 6, se requiere crear un modelo para cada entidad que se requiera almacenar en la base de datos. El modelo debe definir los campos que almacenarán los datos de la entidad alineados con los campos de la base de datos. Ejemplo: 
