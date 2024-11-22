@@ -1,0 +1,62 @@
+✅ Hecho
+​❌No Hecho
+​❗ Mejorar            
+            
+            --Introducción--
+ITBANK a trabajando desde el principio en la creación del front-end web para los clientes del banco, luego se dedicó al back-end generando un modelo y base de datos para almacenar la información.
+De la misma forma que un diseñador de autos no puede crear el motor de este sin tener alguna referencia sobre cómo será la carrocería en sí, no se puede crear un back-end sin tener una referencia sobre cómo será el front-end. Por eso trabajamos en la siguiente modalidad.
+El equipo de desarrollo definió como estándar de trabajo el framework DJANGO.
+El objetivo de unir el front-end con el back-end lo llevaremos adelante en el próximo SPRINT diseñando las APIs necesarias para que se el home banking quede operativo.
+    
+    --Primera problemática: Crear Modelo. (Segunda Clase)
+Se requiere crear el proyecto DJANGO homebanking, el mismo va a estar compuesto al por diferentes aplicaciones, como, por ejemplo: 
+Clientes,​​​❌
+Cuentas, ​❌
+Tarjetas, ​❌
+Movimientos, ​❌
+Prestamos, ​❌
+Login,  ​❌
+entre otras. Pueden generar las aplicaciones necesarias para asegurar la adecuada segmentación del proyecto. (!!!) 
+
+A partir de la base de datos trabajada en el sprint 6, se requiere crear un modelo para cada entidad que se requiera almacenar en la base de datos. El modelo debe definir los campos que almacenarán los datos de la entidad alineados con los campos de la base de datos. Ejemplo: 
+Cliente, ​❌
+Cuenta, ​❌
+Empleado, ​❌
+Movimiento, ​❌
+Préstamo, ​❌
+Tarjeta, etc. (!!!)​❌
+
+Desarrollar los modelos en las aplicaciones creadas anteriormente. (!!!)
+
+Puede ser de utilidad explorar el comando inspectdb(https://docs.djangoproject.com/en/4.0/howto/legacy-databases/), capaz de generar los modelos automáticamente a partir de las entidades de la base de datos.
+    
+    --Segunda problemática: Crear Vistas
+Luego de haber creado el modelo de nuestro home banking, nos vamos a dedicar a crear las vistas que van a dar soporte cuando sean requeridas por la interfaz de front-end.
+Teniendo en cuenta que las interacciones de la interfaz requerirán vistas, desarrollar todas las necesarias, por ejemplo, 
+vista login ✅
+una vista para mostrar datos de un cliente, ​❌
+una vista para crear una cuenta bancaria, ​❌
+una vista para listar todas las cuentas de un cliente,​❌
+una vista para mostrar todas las tarjetas de un cliente​❌
+etc. (!!!)​❌
+
+--Recordá:
+En el modelo MVC, las vistas son responsables de manejar las peticiones de los usuarios y responder con la información adecuada. En el siguiente sprint, veremos Django REST Framework para construir una API. Dentro de este contexto, las vistas serán responsables de manejar las peticiones HTTP y responder con los datos del modelo en formato JSON.
+
+    --Tercera problemática: Autenticación -- (Cuarta Clase)
+Incorporar el registro y autenticación de clientes para todo el sitio. Se debe utilizar el sistema de autenticación provisto por DJANGO.(!!!) 
+
+.Se necesita generar una relación entre el usuario que se autentica y la información de cliente almacenada. Debería haber una relación 1 a 1 entre cliente y usuario.(!!!)
+.La construcción deberá permitir que se pueda agregar al menú del home banking la opción de salir o cerrar sesión. (!!!)
+.Una vez autenticado el usuario, el home banking debe mostrar su nombre en algún lugar del sitio. (!!!)
+.Todas las páginas del sitio van a tener que chequear que el usuario esta autenticado.(!!!)
+
+    --Cuarta problemática: Formulario
+El equipo de marketing lanzo una compañía para todos sus clientes ofreciendo préstamos personales. Por ese motivo, tenemos que crear una app préstamos. La aplicación debe tener un formulario de solicitud de préstamos preaprobados. El formulario debe ser enviado por POST y tener protección contra Cross site request forgery.(!!!)
+El cliente debe poder autenticarse para poder precargar sus datos. El cliente debe poder elegir el tipo de préstamo y la fecha de inicio. El monto de preaprobación depende del tipo de cliente con los siguientes límites: (!!!)
+
+·BLACK: 500.000 $
+·GOLD: 300.000 $
+·CLASSIC: 100.000 $
+
+Una vez solicitada la solicitud de préstamo, se debe registrar en la base de datos. La solicitud debe impactar en el préstamo y en el saldo de cuenta. En todo momento, el formulario debe informar si la solicitud fue aprobada o rechazada. (!!!)
