@@ -35,9 +35,9 @@ Luego de haber creado el modelo de nuestro home banking, nos vamos a dedicar a c
 Teniendo en cuenta que las interacciones de la interfaz requerirán vistas, desarrollar todas las necesarias, por ejemplo, 
 vista login ✅
 una vista para mostrar datos de un cliente, ​​❗
-una vista para crear una cuenta bancaria, ​❌
-una vista para listar todas las cuentas de un cliente,​❌
-una vista para mostrar todas las tarjetas de un cliente​❌
+una vista para crear una cuenta bancaria, ✅
+una vista para listar todas las cuentas de un cliente,✅
+una vista para mostrar todas las tarjetas de un cliente✅
 etc. (!!!)​❌
 
 --Recordá:

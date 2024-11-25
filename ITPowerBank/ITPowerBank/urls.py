@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('login.urls')), # Redirige a las rutas de la aplicación login
     path('cliente/', include('clientes.urls')),
     path('cuenta/', include('cuentas.urls')),
+    path('tarjetas/', include('tarjetas.urls'))
 ]
