@@ -1,20 +1,17 @@
 from django.db import models
 from clientes.models import Cliente
 from django.utils import timezone
+from django.utils import timezone 
 # Create your models here.
-
-class Tipo_prestamos(models.Model):
-    nombre = models.CharField(max_length=50)
-
-    class Meta:
-        db_table = "tipo_prestamos"
 
 
 class Prestamos(models.Model):
-    cliente_id = models.ForeignKey(Cliente, on_delete=models.CASCADE)
-    tipo = models.ForeignKey(Tipo_prestamos, on_delete=models.CASCADE)
-    fecha =models.DateTimeField(default=timezone.now)
+    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+    tipo = models.CharField(max_length=50, choices=[("HIPOTECARIO", 'HIPOTECARIO'), ("PRENDARIO", 'PRENDARIO'), ("PERSONAL", 'PERSONAL')])
+    fecha = models.DateField(default=timezone.now)
     monto = models.DecimalField(max_digits=15, decimal_places=2)
+    estado = models.CharField(max_length=10, default='Pendiente')
+    aprobado = models.BooleanField(default=False)
 
 
     class Meta:

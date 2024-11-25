@@ -2,7 +2,7 @@ from django.db import models
 from clientes.models import Cliente
 
 class TipoCuenta(models.Model):
-    nombre = models.CharField(max_length=50)
+    nombre = models.CharField(max_length=50, choices=[('Cuenta corriente en Dolares', 'Cuenta corriente en Dolares'), ('Cuenta corriente en Pesos', 'Cuenta corriente en Pesos'), ('Cuenta Ahorro en Dolares', 'Cuenta Ahorro en Dolares'), ('Cuenta Ahorro Pesos', 'Cuenta Ahorro en Pesos')])
 
     class Meta:
         db_table = 'tipo_cuenta'

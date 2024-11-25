@@ -19,6 +19,9 @@ def crear_cuenta(request):
 
 @login_required
 def listado_cuentas_cliente(request):
+
+    print(request.user.cliente)
+
     cliente = request.user.cliente
     cuentas = Cuenta.objects.filter(cliente = cliente)
     return render(request, 'cuentas/listar_cuentas.html', {'cuentas': cuentas})

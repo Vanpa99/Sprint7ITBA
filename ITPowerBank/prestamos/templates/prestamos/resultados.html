@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% if prestamo.aprobado %}
+    <p>Tu solicitud de préstamo ha sido aprobada.</p>
+    {% else %}
+    <p>Tu solicitud de préstamo ha sido rechazada.</p>
+    {% endif %}
+    <p>Monto solicitado: {{ prestamo.monto_solicitado }}</p>
+    <p>Estado: {{ prestamo.estado }}</p>
+
+    <a href="{% url 'home' %}"></a>
+  </body>
+</html>

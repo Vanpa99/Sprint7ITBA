@@ -5,11 +5,11 @@ from django.utils import timezone
 # Create your models here.
 
 class Marcatarjeta(models.Model):
-    nombre = models.CharField(max_length=50)
+    nombre = models.CharField(max_length=50, choices=[('VISA', 'VISA'), ('MASTERCARD', 'MASTERCARD')])
 
 
 class Tarjeta(models.Model):
-    cliente_id = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     numero = models.CharField(max_length=16, unique=True)
     cvv = models.CharField(max_length=3)
     fecha_venc= models.DateField(default=timezone.now)
@@ -21,4 +21,4 @@ class Tarjeta(models.Model):
         db_table = 'tarjeta'
 
     def __str__(self):
-        return f"Tarjeta {self.numero} ({self.tipo})"
+        return f"Tarjeta Cliente: {self.cliente} {self.numero} ({self.tipo})"
