@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear Cuenta Bancaria</title>
+  </head>
+  <body>
+    <h2>Crear Cuenta Bancaria</h2>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Crear Cuenta</button>
+    </form>
+    <a href="{% url 'listar_cuentas' %}">Volver al listado</a>
+  </body>
+</html>

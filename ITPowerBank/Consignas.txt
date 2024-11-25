@@ -12,19 +12,19 @@ El objetivo de unir el front-end con el back-end lo llevaremos adelante en el pr
 Se requiere crear el proyecto DJANGO homebanking, el mismo va a estar compuesto al por diferentes aplicaciones, como, por ejemplo: 
 Login,✅
 Clientes,​​​✅
-Cuentas, ​❌
-Tarjetas, ​❌
-Movimientos, ​❌
-Prestamos, ​❌
+Cuentas, ✅
+Tarjetas, ✅
+Movimientos, ✅
+Prestamos, ✅
 entre otras. Pueden generar las aplicaciones necesarias para asegurar la adecuada segmentación del proyecto. (!!!) 
 
 A partir de la base de datos trabajada en el sprint 6, se requiere crear un modelo para cada entidad que se requiera almacenar en la base de datos. El modelo debe definir los campos que almacenarán los datos de la entidad alineados con los campos de la base de datos. Ejemplo: 
 Cliente, ​​❗
-Cuenta, ​❌
-Empleado, ​❌
-Movimiento, ​❌
-Préstamo, ​❌
-Tarjeta, etc. (!!!)​❌
+Cuenta, ✅
+Empleado, ✅
+Movimiento, ✅
+Préstamo, ✅
+Tarjeta, etc. (!!!)✅
 
 Desarrollar los modelos en las aplicaciones creadas anteriormente. (!!!)
 
@@ -34,7 +34,7 @@ Puede ser de utilidad explorar el comando inspectdb(https://docs.djangoproject.c
 Luego de haber creado el modelo de nuestro home banking, nos vamos a dedicar a crear las vistas que van a dar soporte cuando sean requeridas por la interfaz de front-end.
 Teniendo en cuenta que las interacciones de la interfaz requerirán vistas, desarrollar todas las necesarias, por ejemplo, 
 vista login ✅
-una vista para mostrar datos de un cliente, ​❌
+una vista para mostrar datos de un cliente, ​​❗
 una vista para crear una cuenta bancaria, ​❌
 una vista para listar todas las cuentas de un cliente,​❌
 una vista para mostrar todas las tarjetas de un cliente​❌

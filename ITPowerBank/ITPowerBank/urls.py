@@ -20,4 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('login.urls')), # Redirige a las rutas de la aplicación login
+    path('cliente/', include('clientes.urls')),
+    path('cuenta/', include('cuentas.urls')),
 ]
