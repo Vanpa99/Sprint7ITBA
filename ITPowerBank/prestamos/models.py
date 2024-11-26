@@ -15,8 +15,8 @@ class Prestamos(models.Model):
 
 
     class Meta:
-        db_table= "prestamos"
+        db_table= "prestamo"
 
 
     def __str__(self):
-        return f'Prestamos para el cliente ${self.cliente_id} por un monto de ${self.monto}'
+        return f'Prestamos para el cliente {self.cliente} por un monto de ${self.monto}'

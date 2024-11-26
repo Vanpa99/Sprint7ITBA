@@ -19,7 +19,7 @@ Prestamos, ✅
 entre otras. Pueden generar las aplicaciones necesarias para asegurar la adecuada segmentación del proyecto. (!!!) 
 
 A partir de la base de datos trabajada en el sprint 6, se requiere crear un modelo para cada entidad que se requiera almacenar en la base de datos. El modelo debe definir los campos que almacenarán los datos de la entidad alineados con los campos de la base de datos. Ejemplo: 
-Cliente, ​​❗
+Cliente, ✅​​
 Cuenta, ✅
 Empleado, ✅
 Movimiento, ✅
@@ -34,11 +34,11 @@ Puede ser de utilidad explorar el comando inspectdb(https://docs.djangoproject.c
 Luego de haber creado el modelo de nuestro home banking, nos vamos a dedicar a crear las vistas que van a dar soporte cuando sean requeridas por la interfaz de front-end.
 Teniendo en cuenta que las interacciones de la interfaz requerirán vistas, desarrollar todas las necesarias, por ejemplo, 
 vista login ✅
-una vista para mostrar datos de un cliente, ​​❗
+una vista para mostrar datos de un cliente, ​​✅
 una vista para crear una cuenta bancaria, ✅
 una vista para listar todas las cuentas de un cliente,✅
 una vista para mostrar todas las tarjetas de un cliente✅
-etc. (!!!)​❌
+pedir prestamos personales ✅
 
 --Recordá:
 En el modelo MVC, las vistas son responsables de manejar las peticiones de los usuarios y responder con la información adecuada. En el siguiente sprint, veremos Django REST Framework para construir una API. Dentro de este contexto, las vistas serán responsables de manejar las peticiones HTTP y responder con los datos del modelo en formato JSON.
@@ -60,3 +60,11 @@ El cliente debe poder autenticarse para poder precargar sus datos. El cliente de
 ·CLASSIC: 100.000 $
 
 Una vez solicitada la solicitud de préstamo, se debe registrar en la base de datos. La solicitud debe impactar en el préstamo y en el saldo de cuenta. En todo momento, el formulario debe informar si la solicitud fue aprobada o rechazada. (!!!)
+
+
+POR HACER 
+
+# QUE LOGIN RIQUERED FUNCIONE
+# AGREGAR EN EL REGISTRO UN CAMPO PARA DEFINIR EL TIPO DE CLIENTE (BLACK, GOLD, CLASSIC) Y UNA PARA QUE AGREGUE SU DIRECCION
+# ARREGLAR LOS a PARA QUE LLEVEN AL HOME 
+

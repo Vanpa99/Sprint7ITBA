@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .forms import PrestamoForm
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def solicitar_prestamo(request):
     cliente = request.user.cliente  # Relación cliente-usuario autenticado
     tipo_cliente = cliente.tipo_cliente
@@ -41,4 +43,4 @@ def solicitar_prestamo(request):
     else:
         form = PrestamoForm()
 
-    return render(request, 'prestamos/solicitar.html', {'form': form})
+    return render(request, 'prestamos/solicitud.html', {'form': form})
