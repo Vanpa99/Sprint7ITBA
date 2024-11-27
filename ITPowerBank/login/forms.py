@@ -8,21 +8,50 @@ class LoginForm(forms.Form):  # Creamos un formulario basado en clases
     username = forms.CharField(
         label="Usuario",  # Etiqueta que aparecerá junto al campo
         max_length=20,  # Longitud máxima permitida
-        widget=forms.TextInput(attrs={'class': 'form-control'})  # Estilo CSS para el campo
+        widget=forms.TextInput(attrs={'class': 'inputField'})  # Estilo CSS para el campo
     )
     # Campo para ingresar la contraseña, con tipo de entrada "password"
     password = forms.CharField(
         label="Contraseña",  # Etiqueta para el campo
-        widget=forms.PasswordInput(attrs={'class': 'form-control'})  # Estilo CSS y entrada oculta
+        widget=forms.PasswordInput(attrs={'class': 'inputField'})  # Estilo CSS y entrada oculta
     )
 
 class RegistroForm(forms.Form):
-    username = forms.CharField(max_length=150, label="Nombre de usuario")
-    password1 = forms.CharField(widget=forms.PasswordInput, label="Contraseña")
-    password2 = forms.CharField(widget=forms.PasswordInput, label="Repite la contraseña")
-    nombre = forms.CharField(max_length=100, label="Nombre")
-    apellido = forms.CharField(max_length=100, label="Apellido")
-    dni = forms.CharField(max_length=10, label="DNI")
+    username = forms.CharField(
+        max_length=150, 
+        label="Nombre de usuario",
+        widget=forms.TextInput(attrs={'class': 'inputField'})
+    )
+
+    password1 = forms.CharField(
+        widget=forms.PasswordInput(
+            attrs={'class': 'inputField'}), 
+        label="Contraseña"
+    )
+
+    password2 = forms.CharField(
+        widget=forms.PasswordInput(
+            attrs={'class': 'inputField'}), 
+            label="Repite la contraseña"
+    )
+    
+    nombre = forms.CharField(
+        max_length=100, 
+        label="Nombre",
+        widget=forms.TextInput(attrs={'class': 'inputField'})
+    )
+
+    apellido = forms.CharField(
+        max_length=100, 
+        label="Apellido",
+        widget=forms.TextInput(attrs={'class': 'inputField'})
+    )
+
+    dni = forms.CharField(
+        max_length=10, 
+        label="DNI",
+        widget=forms.TextInput(attrs={'class': 'inputField'})
+    )
 
     def clean_username(self):
         username = self.cleaned_data.get('username')

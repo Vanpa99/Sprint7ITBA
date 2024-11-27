@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <title>Registro</title>
 </head>
 <body>
-    <h1>Registrarse</h1>
-
-
-
+    <div class="formContainer">
+    <h2 class="sectionTitle">Registrarse</h2>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Registrarse</button>
+        <div class="btnContainer">
+            <button type="submit">Registrarse</button>
+        </div>
     </form>
+
+        <p class="pregunta">
+            ¿Ya tienes una cuenta? 
+            <a href="{% url 'login' %}">¡Inicia sesión!</a>
+        </p>
+
+    </div>
 </body>
 </html>
