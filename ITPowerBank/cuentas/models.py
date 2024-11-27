@@ -21,4 +21,4 @@ class Cuenta(models.Model):
         db_table = 'cuenta'
 
     def __str__(self):
-        return f"Cuenta {self.numero} - Saldo: {self.saldo}"
+        return f"Cuenta de {self.cliente} - Número: {self.numero} - Saldo: {self.saldo}"
