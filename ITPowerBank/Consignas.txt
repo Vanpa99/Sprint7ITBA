@@ -26,7 +26,7 @@ Movimiento, ✅
 Préstamo, ✅
 Tarjeta, etc. (!!!)✅
 
-Desarrollar los modelos en las aplicaciones creadas anteriormente. (!!!)
+Desarrollar los modelos en las aplicaciones creadas anteriormente. ​✅
 
 Puede ser de utilidad explorar el comando inspectdb(https://docs.djangoproject.com/en/4.0/howto/legacy-databases/), capaz de generar los modelos automáticamente a partir de las entidades de la base de datos.
     
@@ -49,17 +49,17 @@ Incorporar el registro y autenticación de clientes para todo el sitio. Se debe 
 .Se necesita generar una relación entre el usuario que se autentica y la información de cliente almacenada. Debería haber una relación 1 a 1 entre cliente y usuario.✅
 .La construcción deberá permitir que se pueda agregar al menú del home banking la opción de salir o cerrar sesión. ✅
 .Una vez autenticado el usuario, el home banking debe mostrar su nombre en algún lugar del sitio. ✅
-.Todas las páginas del sitio van a tener que chequear que el usuario esta autenticado.​❗
+.Todas las páginas del sitio van a tener que chequear que el usuario esta autenticado.​​❌
 
     --Cuarta problemática: Formulario
-El equipo de marketing lanzo una compañía para todos sus clientes ofreciendo préstamos personales. Por ese motivo, tenemos que crear una app préstamos. La aplicación debe tener un formulario de solicitud de préstamos preaprobados. El formulario debe ser enviado por POST y tener protección contra Cross site request forgery.(!!!)
-El cliente debe poder autenticarse para poder precargar sus datos. El cliente debe poder elegir el tipo de préstamo y la fecha de inicio. El monto de preaprobación depende del tipo de cliente con los siguientes límites: (!!!)
+El equipo de marketing lanzo una compañía para todos sus clientes ofreciendo préstamos personales. Por ese motivo, tenemos que crear una app préstamos. La aplicación debe tener un formulario de solicitud de préstamos preaprobados. El formulario debe ser enviado por POST y tener protección contra Cross site request forgery.✅
+El cliente debe poder autenticarse para poder precargar sus datos. El cliente debe poder elegir el tipo de préstamo y la fecha de inicio. El monto de preaprobación depende del tipo de cliente con los siguientes límites: ​❌
 
 ·BLACK: 500.000 $
 ·GOLD: 300.000 $
 ·CLASSIC: 100.000 $
 
-Una vez solicitada la solicitud de préstamo, se debe registrar en la base de datos. La solicitud debe impactar en el préstamo y en el saldo de cuenta. En todo momento, el formulario debe informar si la solicitud fue aprobada o rechazada. (!!!)
+Una vez solicitada la solicitud de préstamo, se debe registrar en la base de datos. La solicitud debe impactar en el préstamo y en el saldo de cuenta. En todo momento, el formulario debe informar si la solicitud fue aprobada o rechazada. ✅​
 
 
 POR HACER 
