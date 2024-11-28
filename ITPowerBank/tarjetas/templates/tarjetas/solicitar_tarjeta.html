@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+
+<h2>- Solicitar Tarjeta -</h2>
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Solicitar</button>
+</form>
+<a href="{% url 'listar_tarjetas' %}">Volver al listado</a>
+
+{% endblock %}

@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Tarjeta, Marcatarjeta
+from .models import Tarjeta
 # Register your models here.
 
 admin.site.register(Tarjeta)
-admin.site.register(Marcatarjeta)

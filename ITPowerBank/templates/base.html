@@ -1,78 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        {% load static %} <!-- Habilita el uso de archivos estáticos -->
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-        <title>ITPowerBank</title>
-    </head>
-    <body>
-        <header class="encabezado">
-            <hr>
-            <div class="logo">
-                <p><i>Logo de la empresa</i></p>
-            </div>
-            {% if user.is_authenticated %}
-                <p class="saludo">Bienvenido, {{ user.cliente.nombre }} {{ user.cliente.apellido }}.</p><!-- Muestra el nombre y apellido del cliente autenticado -->
-                <form method="post" action="{% url 'logout' %}">
-                    {% csrf_token %}
-                    <button type="submit">Cerrar sesión</button>
-                </form>            
-                {% else %}
-                <a href="{% url 'login' %}">Iniciar sesión</a><!-- Enlace para iniciar sesión -->
-            {% endif %}
-            <hr>
-        </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <!-- Habilita el uso de archivos estáticos -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <title>ITPowerBank</title>
+  </head>
+  <body>
+    <header class="encabezado">
+      <hr />
+      <div class="logo">
+        <p><i>Logo de la empresa</i></p>
+      </div>
+      {% if user.is_authenticated %}
+      <p class="saludo">
+        Bienvenido, {{ user.cliente.nombre }} {{ user.cliente.apellido }}.
+      </p>
+      <!-- Muestra el nombre y apellido del cliente autenticado -->
+      <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit">Cerrar sesión</button>
+      </form>
+      {% else %}
+      <a href="{% url 'login' %}">Iniciar sesión</a
+      ><!-- Enlace para iniciar sesión -->
+      {% endif %}
+      <hr />
+    </header>
 
-        <main>
-            <hr>
-            <div class="contenedor">
-            <aside class="menu">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="{% url 'info_cliente' %}">
-                                Mi informacion
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{% url 'crear_cuenta' %}">
-                                Crear Cuenta Bancaria
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{% url 'listar_cuentas' %}">
-                                Mis Cuentas
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{% url 'listar_tarjetas' %}">
-                                Mis Tarjetas
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{% url 'solicitar_prestamo' %}">
-                                Prestamos
-                            </a>
-                        </li>
-                
-                    </ul>
-                
-                </nav>
-            </aside>
+    <main>
+      <hr />
+      <div class="contenedor">
+        <aside class="menu">
+          <nav>
+            <ul>
+              <li>
+                <a href="{% url 'info_cliente' %}"> Mi informacion </a>
+              </li>
+              <li>
+                <a href="{% url 'crear_cuenta' %}"> Crear Cuenta Bancaria </a>
+              </li>
+              <li>
+                <a href="{% url 'listar_cuentas' %}"> Mis Cuentas </a>
+              </li>
+              <li>
+                <a href="{% url 'listar_tarjetas' %}"> Mis Tarjetas </a>
+              </li>
+              <li>
+                <a href="{% url 'solicitar_tarjeta' %}">
+                  Solictud de Tarjeta
+                </a>
+              </li>
+              <li>
+                <a href="{% url 'solicitar_prestamo' %}"> Prestamos </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
 
-            <div class="areaPrincipal">
-                {% block content %}{% endblock %} 
-            </div><!-- Bloque de contenido que puede ser sobrescrito por otras plantillas -->
-        </div>
-            <hr>
-        </main>
-        
-        <footer class="footer">
-            <hr>
-            <p>&copy; 2024 ITPowerBank</p>
-            <hr>
-        </footer>
-    </body>
+        <div class="areaPrincipal">{% block content %}{% endblock %}</div>
+        <!-- Bloque de contenido que puede ser sobrescrito por otras plantillas -->
+      </div>
+      <hr />
+    </main>
+
+    <footer class="footer">
+      <hr />
+      <p>&copy; 2024 ITPowerBank</p>
+      <hr />
+    </footer>
+  </body>
 </html>
