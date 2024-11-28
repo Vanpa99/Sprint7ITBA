@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Solicitud de Prestamos</title>
-  </head>
-  <body>
+{% extends 'base.html' %} {% block content %}
+<a href="{% url 'home' %}">Volver al Inicio</a>
+
+<div class="areaPrincipal">
+  <div class="formContainer">
+    <h2 class="sectionTitle">Solicitud de préstamo</h2>
     <form method="post">
       {% csrf_token %} {{ form.as_p }}
       <button type="submit">Solicitar préstamo</button>
     </form>
-  </body>
-</html>
+  </div>
+</div>
+{% endblock %}

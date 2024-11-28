@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mis Cuentas</title>
-  </head>
-  <body>
-    <h1>Mis Cuentas</h1>
-    <table border="1">
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2 class="sectionTitle">Mis Cuentas</h2>
+  <div class="table-container"> <!-- Contenedor para la tabla con desplazamiento horizontal -->
+    <table class="table">
       <thead>
         <tr>
           <th>Número de Cuenta</th>
@@ -17,18 +13,17 @@
       </thead>
       <tbody>
         {% for cuenta in cuentas %}
-        <tr>
-          <td>{{ cuenta.numero }}</td>
-          <td>{{ cuenta.tipo }}</td>
-          <td>${{ cuenta.saldo }}</td>
-        </tr>
+          <tr>
+            <td class="tableCell">{{ cuenta.numero }}</td>
+            <td>{{ cuenta.tipo }}</td>
+            <td>${{ cuenta.saldo }}</td>
+          </tr>
         {% empty %}
-        <tr>
-          <td colspan="3">No tienes cuentas registradas.</td>
-        </tr>
+          <tr>
+            <td colspan="3">No tienes cuentas registradas.</td>
+          </tr>
         {% endfor %}
       </tbody>
     </table>
-    <!-- <a href="/">Volver al inicio</a> -->
-  </body>
-</html>
+  </div>
+{% endblock %}

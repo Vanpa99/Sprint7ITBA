@@ -14,8 +14,28 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-color: var(--claro);
-  }
+}
 
+.contenedor {
+    display: flex;
+    flex: 1;
+}
+  
+  .areaPrincipal {
+    margin: 20px;
+    flex: 1;
+}
+  
+@media (max-width: 768px) {
+    .contenedor {
+      flex-direction: column;
+    }
+    
+    .areaPrincipal {
+      margin: 5px;
+    }
+}
+  
 /* Estilos Reutilizables */
 .sectionTitle {
     text-align: center;
@@ -94,26 +114,7 @@ button {
 
   
 
-.contenedor {
-    display: flex;
-    flex: 1;
-}
-  
-  .areaPrincipal {
-    padding: 20px;
-    flex: 1;
-}
-  
-@media (max-width: 768px) {
-    .contenedor {
-      flex-direction: column;
-    }
-    
-    .areaPrincipal {
-      padding: 0px;
-    }
-}
-  
+
   /* Estilos para el menu */  
 .menu {
     width: 200px;
@@ -170,6 +171,191 @@ button {
     }
 }
     /* ^Estilos para el Menu^ */
+
+    /* Estilos para Home */
+.hero-section {
+    text-align: center;
+}
+.hero-section h1 {
+    margin: 10px;
+}
+.content-section {
+    padding: 20px 15px;
+}
+.content-section h2 {
+    margin-bottom: 20px;
+}
+.content-section p {
+    margin-bottom: 20px;
+}
+.cta-section {
+    padding: 40px 15px;
+    text-align: center;
+}
+    /* ^Estilos para Home^ */
+
+
+    /* Estilos para Info Cliente */
+.clienteTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--claro);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.clienteTable th, .clienteTable td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--difuminado);
+}
+
+.clienteTable th {
+  /* background-color: var(--oscuro); */
+  font-weight: bold;
+}
+
+.clienteTable td {
+  color: var(--oscuro);
+}
+
+.clienteTable tr:nth-child(even) {
+  background-color: var(--claro);
+}
+
+.clienteTable tr:hover {
+  background-color: var(--difuminado);
+}
+
+@media screen and (max-width: 768px) {
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .clienteTable th, .clienteTable td {
+    padding: 10px 12px;
+  }
+
+  .formContainer {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sectionTitle {
+    font-size: 18px;
+  }
+
+  .clienteTable th, .clienteTable td {
+    padding: 8px 10px;
+  }
+
+  .formContainer {
+    padding: 15px;
+  }
+}
+      /* ^Estilos para Info Cliente^ */
+
+    /* Estilos para Prestamo */
+
+    /* ^Estilos para Prestamo^ */
+
+
+
+
+    /* Estilos para Mis Cuentas */
+table-container {
+overflow-x: auto;
+margin-top: 20px;
+}
+
+.table {
+width: 100%;
+border-collapse: collapse;
+background-color: var(--claro);
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+table-layout: fixed;
+}
+
+.table th, .table td {
+padding: 12px 15px;
+text-align: left;
+border-bottom: 1px solid var(--difuminado);
+}
+
+.table thead tr {
+background-color: var(--oscuro);
+color: white;
+}
+
+.table tbody tr:nth-child(even) {
+background-color: var(--claro);
+}
+
+.table tbody tr:hover {
+background-color: var(--difuminado);
+}
+
+.tableCell {
+font-weight: bold;
+color: var(--oscuro);
+}
+
+.table tbody tr td[colspan="3"] {
+text-align: center;
+font-style: italic;
+color: var(--oscuro);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+.table-container {
+    margin-top: 10px;
+}
+
+.table {
+    table-layout: auto;
+}
+
+.table th, .table td {
+    padding: 8px 10px;
+}
+
+.table th {
+    font-size: 14px;
+}
+
+.table td {
+    font-size: 13px;
+}
+
+.table-container {
+    margin-bottom: 20px;
+}
+}
+
+/* Móviles (menos de 480px) */
+@media screen and (max-width: 480px) {
+.sectionTitle {
+    font-size: 20px;
+}
+
+.table {
+    font-size: 12px;
+}
+
+.table th, .table td {
+    padding: 6px 8px;
+}
+
+.table td {
+    font-size: 11px;
+}
+
+.table-container {
+    margin-top: 10px;
+}
+}
+    /* ^Estilos para Mis Cuentas^ */
   
     /* Estilos para el Footer */
 .footer {

@@ -9,7 +9,6 @@
     </head>
     <body>
         <header class="encabezado">
-            <hr>
             <div class="logo">
                 <p><i>Logo de la empresa</i></p>
             </div>
@@ -22,11 +21,9 @@
                 {% else %}
                 <a href="{% url 'login' %}">Iniciar sesión</a><!-- Enlace para iniciar sesión -->
             {% endif %}
-            <hr>
         </header>
 
         <main>
-            <hr>
             <div class="contenedor">
             <aside class="menu">
                 <nav>
@@ -66,13 +63,10 @@
                 {% block content %}{% endblock %} 
             </div><!-- Bloque de contenido que puede ser sobrescrito por otras plantillas -->
         </div>
-            <hr>
         </main>
         
         <footer class="footer">
-            <hr>
             <p>&copy; 2024 ITPowerBank</p>
-            <hr>
         </footer>
     </body>
 </html>
