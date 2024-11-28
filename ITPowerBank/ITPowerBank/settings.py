@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Redirige aquí si un usuario no está autenticado
-LOGIN_URL = '/login/'  
+LOGIN_URL = '/'  
 
 
 # Application definition
