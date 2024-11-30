@@ -9,43 +9,22 @@
     padding: 0;
 }
 
-.contenedor {
-    display: flex;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--claro);
+}
+
+main{
     flex: 1;
 }
+
   
 .areaPrincipal {
     margin: 20px;
-    flex: 1;
 }
 
-  
-@media (max-width: 768px) {
-    .contenedor {
-      flex-direction: column;
-    }
-    
-    .areaPrincipal {
-      padding: 0px;
-    }
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: var(--claro);
-}
-
-.contenedor {
-    display: flex;
-    flex: 1;
-}
-  
-  .areaPrincipal {
-    margin: 20px;
-    flex: 1;
-}
   
 @media (max-width: 768px) {
     .contenedor {
@@ -56,7 +35,8 @@ body {
       margin: 5px;
     }
 }
-  
+
+
 /* Estilos Reutilizables */
 .sectionTitle {
     text-align: center;
@@ -281,7 +261,7 @@ button {
 
 
     /* Estilos para Mis Cuentas */
-table-container {
+.table-container {
 overflow-x: auto;
 margin-top: 20px;
 }
@@ -382,7 +362,7 @@ color: var(--oscuro);
     padding: 10px 0px;
     width: 100%;
     border-top: var(--difuminado) 3px solid;
-}
+    margin-top: auto;  }
     /* ^Estilos para el Footer^ */
 
 

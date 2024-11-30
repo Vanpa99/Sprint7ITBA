@@ -1,36 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mis Tarjetas</title>
-  </head>
-  <body>
-    <h1>Mis Tarjetas</h1>
-    <table border="1">
-      <thead>
-        <tr>
-          <th>Número de Tarjeta</th>
-          <th>Tipo</th>
-          <th>Banco</th>
-          <th>Fecha de Vencimiento</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for tarjeta in tarjetas %}
-        <tr>
-          <td>{{ tarjeta.numero }}</td>
-          <td>{{ tarjeta.tipo }}</td>
-          <td>{{ tarjeta.banco }}</td>
-          <td>{{ tarjeta.fecha_vencimiento }}</td>
-        </tr>
-        {% empty %}
-        <tr>
-          <td colspan="4">No tienes tarjetas registradas.</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    <a href="/">Volver al inicio</a>
-  </body>
-</html>
+{% extends 'base.html' %}	{% block content %}
+<a href="{% url 'home' %}">Volver al inicio</a>
+
+<div class="areaPrincipal">
+  <h2 class="sectionTitle">Mis Tarjetas</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Número de Tarjeta</th>
+        <th>Tipo</th>
+        <th>Banco</th>
+        <th>Fecha de Vencimiento</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for tarjeta in tarjetas %}
+      <tr>
+        <td>{{ tarjeta.numero }}</td>
+        <td>{{ tarjeta.tipo }}</td>
+        <td>{{ tarjeta.banco }}</td>
+        <td>{{ tarjeta.fecha_vencimiento }}</td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="4">No tienes tarjetas registradas.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</div>
+
+{% endblock %}
