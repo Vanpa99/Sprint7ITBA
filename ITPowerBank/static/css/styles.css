@@ -16,13 +16,14 @@ body {
   background-color: var(--claro);
 }
 
-main{
-    flex: 1;
+.contenedor {
+  display: flex;
+  flex: 1;
 }
-
   
 .areaPrincipal {
     margin: 20px;
+    flex: 1;
 }
 
   
@@ -362,7 +363,8 @@ color: var(--oscuro);
     padding: 10px 0px;
     width: 100%;
     border-top: var(--difuminado) 3px solid;
-    margin-top: auto;  }
+    /* margin-top: auto;   */
+  }
     /* ^Estilos para el Footer^ */
 
 
